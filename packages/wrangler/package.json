@@ -1,6 +1,6 @@
 {
 	"name": "wrangler",
-	"version": "4.37.0",
+	"version": "4.36.0",
 	"description": "Command-line interface for all things Cloudflare Workers",
 	"keywords": [
 		"wrangler",
@@ -39,7 +39,8 @@
 	"types": "wrangler-dist/cli.d.ts",
 	"bin": {
 		"wrangler": "./bin/wrangler.js",
-		"wrangler2": "./bin/wrangler.js"
+		"wrangler2": "./bin/wrangler.js",
+		"cloudflare": "./bin/wrangler.js"
 	},
 	"files": [
 		"bin",
@@ -73,7 +74,7 @@
 		"miniflare": "workspace:*",
 		"path-to-regexp": "6.3.0",
 		"unenv": "2.0.0-rc.21",
-		"workerd": "1.20250913.0"
+		"workerd": "1.20250906.0"
 	},
 	"devDependencies": {
 		"@aws-sdk/client-s3": "^3.721.0",
