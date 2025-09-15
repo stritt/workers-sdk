@@ -338,6 +338,7 @@ import { workflowsInstancesTerminateAllCommand } from "./workflows/commands/inst
 import { workflowsListCommand } from "./workflows/commands/list";
 import { workflowsTriggerCommand } from "./workflows/commands/trigger";
 import { printWranglerBanner } from "./wrangler-banner";
+import { runInteractiveDetection } from "./detect/interactive";
 import type { ComplianceConfig } from "./environment-variables/misc-variables";
 import type { LoggerLevel } from "./logger";
 import type { CommonYargsArgv, SubHelp } from "./yargs-types";
@@ -503,7 +504,8 @@ export function createCLIParser(argv: string[]) {
 						logger.log(wranglerVersion);
 					}
 				} else {
-					wrangler.showHelp("log");
+					// Run interactive detection and scaffolding flow
+					await runInteractiveDetection();
 				}
 			}
 		}
